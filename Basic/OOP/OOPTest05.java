@@ -1,0 +1,35 @@
+class Shape {
+    public void draw() {
+        System.out.println("도형을 그리다.");
+    }
+}
+class Circle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("원을 그리다.");
+    }
+}
+class Triangle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("삼각형을 그리다.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape[] ss = new Shape[3];
+
+        Shape s1 = new Shape();
+        Shape s2 = new Circle();
+        Shape s3 = new Triangle();
+
+        ss[0] = s1;
+        ss[1] = s2;
+        ss[2] = s3;
+
+        for(Shape s : ss) {
+            s.draw();
+        }
+    }
+}
